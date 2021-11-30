@@ -2,6 +2,7 @@ import 'package:ebook_app/constants/colors.dart';
 import 'package:ebook_app/models/book.dart';
 import 'package:ebook_app/pages/detail/widgets/book_cover.dart';
 import 'package:ebook_app/pages/detail/widgets/book_detail.dart';
+import 'package:ebook_app/pages/detail/widgets/book_review.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
@@ -15,7 +16,11 @@ class DetailPage extends StatelessWidget {
       appBar: _buildAppBar(context),
       body: SingleChildScrollView(
         child: Column(
-          children: [BookDetail(book: book), BookCover(book: book)],
+          children: [
+            BookDetail(book: book),
+            BookCover(book: book),
+            BookReview(book: book)
+          ],
         ),
       ),
     );
