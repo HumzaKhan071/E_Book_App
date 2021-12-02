@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ebook_ui/constants/colors.dart';
 
 class CustomTab extends StatelessWidget {
   final int selectdindex;
@@ -36,7 +37,7 @@ class CustomTab extends StatelessWidget {
                   ),
                   child: Text(
                     tabs[index],
-                    style: TextStyle(),
+                    style: TextStyle(color: kFont, fontWeight: FontWeight.w500),
                   ),
                 ),
               ),

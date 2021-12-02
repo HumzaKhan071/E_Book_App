@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ebook_ui/constants/colors.dart';
 import 'package:flutter_ebook_ui/pages/home/widgets/custom_tab.dart';
 
+import 'widgets/BookStaggeredGridView.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -27,7 +29,16 @@ class _HomePageState extends State<HomePage> {
                 });
 
                 pageController.jumpToPage(index);
-              })
+              }),
+          Expanded(
+              child: BookStaggeredGridView(
+                  selected: tabIndex,
+                  pageController: pageController,
+                  callback: (int index) {
+                    setState(() {
+                      tabIndex = index;
+                    });
+                  }))
         ],
       ),
     );
