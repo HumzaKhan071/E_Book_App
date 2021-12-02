@@ -1,5 +1,6 @@
+import 'package:ebook_app/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ebook_ui/constants/colors.dart';
+
 
 class CustomTab extends StatelessWidget {
   final int selectdindex;

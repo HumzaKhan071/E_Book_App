@@ -1,6 +1,7 @@
+import 'package:ebook_app/pages/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_ebook_ui/pages/home/home.dart';
+
 
 void main() {
   runApp(const MyApp());
