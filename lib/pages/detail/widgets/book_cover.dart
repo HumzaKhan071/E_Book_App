@@ -1,3 +1,4 @@
+import 'package:ebook_app/constants/colors.dart';
 import 'package:ebook_app/models/book.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,34 @@ class BookCover extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-          )
+          ),
+          Positioned(
+            left: 190,
+            bottom: 20,
+            child: Container(
+              padding: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),color: Colors.deepOrange
+              ),
+              child: Icon(Icons.info_outlined,color: Colors.white,size: 25,),
+            )),
+            Positioned(
+              
+              left: 240,
+              bottom: 20,
+              child: Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: kFont
+                ),
+                child: Row(
+                  children: [
+                    Icon(Icons.play_arrow_outlined,color: Colors.white,size: 25,),
+                    Text("Audio Book",style: TextStyle(color: Colors.white),)
+                  ],
+                ),
+              ))
         ],
       ),
     );
